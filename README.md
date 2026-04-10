@@ -11,7 +11,7 @@ This repository acts as a modular template using `flake-parts`.
 
 ## Formatting
 
-Formatting is handled centrally by `treefmt-nix`. It is configured to target Nix files (`alejandra`) and Markdown files (`mdformat`).
+Formatting is handled centrally by `treefmt-nix`. It is configured to target Nix files and Markdown files.
 
 To format your repository locally, simply run:
 
@@ -21,4 +21,4 @@ nix fmt
 
 ## Continuous Integration
 
-The GitHub Action runs `nix flake check`. Because `treefmt-nix` is imported as a flake module, it automatically injects a derivation into `checks`. If any tracked `.nix` or `.md` file does not match the formatter's expected output, the CI pipeline will fail.
+The GitHub Action runs `nix flake check`. Since `treefmt-nix` is imported as a flake module, it automatically injects a derivation into `checks`. If any tracked `.nix` or `.md` file does not match the formatter's expected output, the CI pipeline will fail.
